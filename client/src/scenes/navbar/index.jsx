@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          People's
+          E-Social
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

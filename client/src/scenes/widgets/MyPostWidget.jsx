@@ -89,14 +89,14 @@ const MyPostWidget = ({ picturePath }) => {
               <FlexBetween>
                 <Box
                   {...getRootProps()}
-                  border={`2px dashed ${palette.primary.main}`}
+                  border={`2px inset ${palette.primary.main}`}
                   p="1rem"
                   width="100%"
                   sx={{ '&:hover': { cursor: 'pointer' } }}
                 >
                   <input {...getInputProps()} />
                   {!image ? (
-                    <p>Add Image To Your Post</p>
+                    <p>Add Image Here</p>
                   ) : (
                     <FlexBetween>
                       <Typography>{image.name}</Typography>
@@ -163,7 +163,7 @@ const MyPostWidget = ({ picturePath }) => {
             borderRadius: '3rem',
           }}
         >
-          Post
+          POST
         </Button>
       </FlexBetween>
     </WidgetWrapper>

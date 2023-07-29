@@ -94,14 +94,20 @@ const PostWidget = ({
       </FlexBetween>
       {isComments && (
         <Box mt="0.5rem">
-          {comments.map((comment, i) => (
-            <Box key={`${name}-${i}`}>
-              <Divider />
-              <Typography sx={{ color: main, m: '0.5rem 0', pl: '1rem' }}>
-                {comment}
-              </Typography>
-            </Box>
-          ))}
+          {comments && comments.length > 0 ? (
+            comments.map((comment, i) => (
+              <Box key={`${name}-${i}`}>
+                <Divider />
+                <Typography sx={{ color: main, m: '0.5rem 0', pl: '1rem' }}>
+                  {comment}
+                </Typography>
+              </Box>
+            ))
+          ) : (
+            <Typography sx={{ color: main, m: '0.5rem 0', pl: '1rem' }}>
+              No comments yet
+            </Typography>
+          )}
           <Divider />
         </Box>
       )}

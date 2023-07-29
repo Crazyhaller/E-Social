@@ -1,18 +1,18 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
       required: true,
-      min: 3,
-      max: 20,
+      min: 2,
+      max: 50,
     },
     lastName: {
       type: String,
       required: true,
-      min: 3,
-      max: 20,
+      min: 2,
+      max: 50,
     },
     email: {
       type: String,
@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema(
     },
     picturePath: {
       type: String,
-      default: '',
+      default: "",
     },
     friends: {
       type: Array,
@@ -39,7 +39,7 @@ const UserSchema = new mongoose.Schema(
     impressions: Number,
   },
   { timestamps: true }
-)
+);
 
-const User = mongoose.model('User', UserSchema)
-export default User
+const User = mongoose.model("User", UserSchema);
+export default User;

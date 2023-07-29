@@ -72,7 +72,7 @@ const UserWidget = ({ userId, picturePath }) => {
             >
               {firstName} {lastName}
             </Typography>
-            <Typography color={medium}>{friends.length} Friends</Typography>
+            <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>
         <ManageAccountsOutlined />
@@ -97,7 +97,7 @@ const UserWidget = ({ userId, picturePath }) => {
       {/* THIRD ROW */}
       <Box p="1rem 0">
         <FlexBetween mb="0.5rem">
-          <Typography color={medium}>Your profile stalkers count</Typography>
+          <Typography color={medium}>Who's viewed your profile</Typography>
           <Typography color={main} fontWeight="500">
             {viewedProfile}
           </Typography>

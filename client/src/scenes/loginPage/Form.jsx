@@ -84,11 +84,8 @@ const Form = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(values),
     })
-
     const loggedIn = await loggedInResponse.json()
-
     onSubmitProps.resetForm()
-
     if (loggedIn) {
       dispatch(
         setLogin({
@@ -192,13 +189,13 @@ const Form = () => {
                     {({ getRootProps, getInputProps }) => (
                       <Box
                         {...getRootProps()}
-                        border={`2px dashed ${palette.primary.main}`}
+                        border={`2px inset ${palette.primary.main}`}
                         p="1rem"
                         sx={{ '&:hover': { cursor: 'pointer' } }}
                       >
                         <input {...getInputProps()} />
                         {!values.picture ? (
-                          <p>Add your Profile Picture</p>
+                          <p>Add Picture Here</p>
                         ) : (
                           <FlexBetween>
                             <Typography>{values.picture.name}</Typography>
@@ -248,7 +245,7 @@ const Form = () => {
                 '&:hover': { color: palette.primary.main },
               }}
             >
-              {isLogin ? 'Log In' : 'Register'}
+              {isLogin ? 'LOGIN' : 'REGISTER'}
             </Button>
             <Typography
               onClick={() => {
@@ -260,7 +257,7 @@ const Form = () => {
                 color: palette.primary.main,
                 '&:hover': {
                   cursor: 'pointer',
-                  color: palette.primary.light,
+                  color: palette.primary.dark,
                 },
               }}
             >

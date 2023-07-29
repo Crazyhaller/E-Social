@@ -24,11 +24,11 @@ const AdvertWidget = () => {
         style={{ borderRadius: '0.75rem', margin: '0.75rem 0' }}
       />
       <FlexBetween>
-        <Typography color={main}>DummyCosmetics</Typography>
+        <Typography color={main}>Dummy Cosmetics</Typography>
         <Typography color={medium}>dummycosmetics.com</Typography>
       </FlexBetween>
       <Typography color={medium} m="0.5rem 0">
-        This is a fake sponsored ad. Just a dummy data added to fill the space.
+        It is just a dummy advert for the sake of UI design and it is not real.
       </Typography>
     </WidgetWrapper>
   )
